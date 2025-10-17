@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Magazine Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #fafaf6;
+      color: #111;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 6px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      text-align: center;
+    }
+
+    .headline {
+      column-span: all;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .article {
+      column-count: 3;
+      column-gap: 2rem;
+      column-rule: 1px solid rgba(0,0,0,0.05);
+      text-align: justify;
+    }
+
+    img.float-left {
+      float: left;
+      margin: 0 1rem 1rem 0;
+      width: 35%;
+    }
+
+    @media (max-width: 900px) {
+      .article {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .article {
+        column-count: 1;
+      }
+
+      img.float-left {
+        width: 100%;
+        float: none;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Weekly Review</h1>
+
+    <div class="headline">
+      <h2>Top Stories of the Week</h2>
+    </div>
+
+    <div class="article">
+      <img class="float-left" src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?q=80&w=1000&auto=format&fit=crop" alt="">
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet nibh eget ipsum vehicula aliquet. Praesent vitae sapien at sapien bibendum tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce laoreet, sapien a cursus gravida, elit arcu gravida tortor, a sodales leo arcu sit amet lorem. Suspendisse potenti. Vestibulum euismod lorem a odio vestibulum, id accumsan libero dictum. Vivamus in orci eget nunc suscipit fermentum.
+      </p>
+
+      <p>
+        Morbi pharetra suscipit massa, et faucibus sapien bibendum ac. Nullam faucibus, est vitae efficitur congue, risus lorem pharetra ipsum, id dictum est mauris vitae mauris. Integer at metus at lacus venenatis faucibus. Donec aliquet, sem in pulvinar aliquet, libero eros dignissim ex, eget feugiat dui mauris at lacus.
+      </p>
+
+      <p>
+        Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis vulputate, lectus at iaculis volutpat, elit nisl volutpat sapien, vitae pharetra risus ante vitae augue. Sed in urna quis justo hendrerit tincidunt.
+      </p>
+
+      <p>
+        Donec mattis, quam ac facilisis fermentum, lectus magna dictum magna, vel volutpat massa neque nec libero. Praesent mattis, augue vitae gravida aliquet, mauris lorem tristique odio, a tempus ex magna et mauris.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>

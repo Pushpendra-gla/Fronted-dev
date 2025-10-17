@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pricing Plans</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef3f8;
+      color: #092031;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .wrapper {
+      width: 95%;
+      max-width: 1100px;
+      padding: 2rem;
+    }
+
+    .plans {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .plan {
+      flex: 1;
+      background: #fff;
+      border: 3px solid rgba(9,32,49,0.06);
+      padding: 1.5rem;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 250ms ease, background-color 250ms ease;
+      min-height: 320px;
+    }
+
+    .plan:hover {
+      transform: scale(1.03);
+      background: #f2fbff;
+    }
+
+    .plan h3 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0;
+      flex: 1;
+      width: 100%;
+    }
+
+    .features li {
+      padding: 0.4rem 0;
+      border-top: 1px dashed rgba(9,32,49,0.06);
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1rem;
+      background: #0b74ff;
+      color: #fff;
+    }
+
+    .popular {
+      border-style: solid;
+      border-color: #ff8a00;
+      background: linear-gradient(180deg,#fffaf0,#fff3e6);
+    }
+
+    @media (max-width:800px) {
+      .plans {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div style="text-align:center; margin-bottom:1rem">
+      <h1 style="margin:0">Choose a Plan</h1>
+    </div>
+
+    <div class="plans">
+
+      <div class="plan">
+        <h3>Basic</h3>
+        <div class="price">₹0</div>
+        <ul class="features">
+          <li>Feature A</li>
+          <li>Feature B</li>
+          <li>Community Support</li>
+        </ul>
+        <a class="button" href="#">Get Basic</a>
+      </div>
+
+      <div class="plan popular">
+        <h3>Standard</h3>
+        <div class="price">₹499</div>
+        <ul class="features">
+          <li>Everything in Basic</li>
+          <li>Feature C</li>
+          <li>Priority Support</li>
+        </ul>
+        <a class="button" href="#">Get Standard</a>
+      </div>
+
+      <div class="plan">
+        <h3>Premium</h3>
+        <div class="price">₹999</div>
+        <ul class="features">
+          <li>All Features</li>
+          <li>One-on-one Support</li>
+          <li>Advanced Tools</li>
+        </ul>
+        <a class="button" href="#">Get Premium</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

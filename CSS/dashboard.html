@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: #f3f6fb;
+      color: #071428;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      background: #0b3b5c;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      z-index: 20;
+    }
+
+    .layout {
+      display: flex;
+      gap: 1rem;
+      padding-top: 56px;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: #08293f;
+      color: #dceffb;
+      padding: 1rem;
+      height: calc(100vh - 56px);
+      position: sticky;
+      top: 56px;
+      align-self: flex-start;
+      border-right: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .sidebar a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      padding: 0.6rem 0;
+      border-radius: 6px;
+    }
+
+    .main {
+      flex: 1;
+      padding: 1.25rem;
+    }
+
+    .boxes {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      flex: 1;
+      min-width: 280px;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(3,7,18,0.06);
+    }
+
+    @media (max-width: 800px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div style="font-weight:700">Dashboard</div>
+  </div>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <nav>
+        <a href="#">Overview</a>
+        <a href="#">Analytics</a>
+        <a href="#">Projects</a>
+        <a href="#">Settings</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="boxes">
+        <div class="box">
+          <h3>Sales</h3>
+          <p>Monthly sales data and charts.</p>
+        </div>
+
+        <div class="box">
+          <h3>Users</h3>
+          <p>Active users and engagement.</p>
+        </div>
+      </div>
+
+      <div style="height:1rem"></div>
+
+      <div class="boxes">
+        <div class="box">
+          <h3>Tasks</h3>
+          <p>Open tasks and priorities.</p>
+        </div>
+
+        <div class="box">
+          <h3>Messages</h3>
+          <p>Recent messages and notifications.</p>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

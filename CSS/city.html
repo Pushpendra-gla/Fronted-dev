@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Favorite Destination</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #1b2b4a;
+    }
+
+    header {
+      background: #0b3b5c;
+      color: #fff;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: #dff1ff;
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    main section {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4vh 6vw;
+    }
+
+    .section-hero {
+      background-image: url('https://images.unsplash.com/photo-1505765052173-0abb5a2b7f52?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      text-align: center;
+    }
+
+    .section-info {
+      background: linear-gradient(120deg, rgba(255,235,205,0.95), rgba(255,200,200,0.95));
+      color: #2b2b2b;
+    }
+
+    .section-parallax-1 {
+      background-image: url('https://images.unsplash.com/photo-1505765053421-0d1ee9d4c3a6?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #fff;
+    }
+
+    .section-parallax-2 {
+      background-image: url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      position: relative;
+      color: #fff;
+    }
+
+    .gradient-section {
+      background: radial-gradient(circle at 10% 20%, rgba(10,40,80,0.9), rgba(20,90,120,0.9));
+      color: #fff;
+    }
+
+    .card {
+      max-width: 1000px;
+      background: rgba(255,255,255,0.92);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      margin: 1rem;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0.6rem 0;
+    }
+
+    footer {
+      background: #061424;
+      color: #cfe9ff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    @media (max-width:800px) {
+      .section-hero,
+      .section-parallax-1,
+      .section-parallax-2 {
+        background-attachment: scroll;
+      }
+
+      main section {
+        padding: 3rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lisbon — A Favorite Destination</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#info">History</a>
+      <a href="#radial">Culture</a>
+      <a href="#parallax">Gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="section-hero">
+      <div class="card">
+        <h2>Welcome to Lisbon</h2>
+        <p>
+          Sun-kissed hills, tram-lined streets, and coast-side vistas. 
+          Explore architecture, food, and vibrant culture.
+        </p>
+      </div>
+    </section>
+
+    <section id="info" class="section-info">
+      <div class="card">
+        <h2>History</h2>
+        <p>
+          Lisbon has a long maritime heritage that shaped its culture and architecture. 
+          The city offers a mixture of medieval lanes and modern viewpoints.
+        </p>
+      </div>
+    </section>
+
+    <section id="radial" class="gradient-section">
+      <div class="card">
+        <h2>Culture & Art</h2>
+        <p>
+          From Fado music to tile-work azulejos, Lisbon's creative spirit blends old and new.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-parallax-1">
+      <div class="card">
+        <h2>Seaside Views</h2>
+        <p>
+          Rocky cliffs and sandy stretches meet the Atlantic. 
+          Perfect for sunsets and long walks.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-parallax-2">
+      <div class="card">
+        <h2>Neighborhoods</h2>
+        <p>
+          Alfama, Bairro Alto, and Belém each have distinct flavors and historic landmarks to explore.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2025 Travel Notes</span>
+  </footer>
+</body>
+</html>
