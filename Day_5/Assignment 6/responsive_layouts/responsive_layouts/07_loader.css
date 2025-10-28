@@ -1,0 +1,8 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{height:100vh;display:flex;align-items:center;justify-content:center;background:#fafafa}
+.wrap{display:flex;gap:10px;align-items:flex-end;height:60px}
+.dot{width:18px;height:18px;border-radius:50%;background:#0b74da;animation:updown .7s ease-in-out infinite}
+.dot.d1{animation-delay:0s}
+.dot.d2{animation-delay:.15s}
+.dot.d3{animation-delay:.3s}
+@keyframes updown{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}

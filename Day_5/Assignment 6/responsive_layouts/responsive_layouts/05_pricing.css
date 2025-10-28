@@ -1,0 +1,9 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,Arial}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f3f6fb;padding:2rem}
+.pricing{display:flex;gap:1.5rem;align-items:stretch;animation:fadeIn 600ms ease both}
+.card{flex:1;padding:2rem;border-radius:10px;background:#fff;text-align:center;transition:transform .3s,box-shadow .3s;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+.card:hover{transform:translateY(-10px)}
+.featured{transform:scale(1.03);background:#0b74da;color:#fff}
+.price{display:block;font-weight:800;font-size:1.5rem;margin-top:.5rem}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:750px){.pricing{flex-direction:column;padding:1rem} .featured{transform:none}}
