@@ -1,0 +1,11 @@
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{margin:28px;background:#fbfbfb;color:#111}
+h1{margin-bottom:12px}
+form input[type="text"]{padding:8px;border:2px solid #ccc;border-radius:6px}
+input[type="text"]:focus{outline:none;border-color:#4a90e2}
+a[href^="https"]{text-decoration:underline}
+nav a + a{margin-left:12px}
+.items li:nth-child(odd){background:#eef;padding:8px}
+.items li:nth-child(even){background:#efe;padding:8px}
+.items li::before{content:"• ";color:#888}
+input[type="checkbox"]:checked + label{font-weight:700}

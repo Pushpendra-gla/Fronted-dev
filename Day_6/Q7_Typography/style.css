@@ -1,0 +1,11 @@
+*{box-sizing:border-box}
+body{margin:30px;font-family:Georgia,serif;background:#fff;color:#111}
+.article{max-width:720px;margin:0 auto}
+h1{font-family:Arial,Helvetica,sans-serif;font-size:2rem;letter-spacing:.5px}
+p{line-height:1.6;font-size:1rem}
+.lead{font-size:1.05rem}
+mark{background:#ffeb3b;padding:.1rem}
+strong{font-weight:700}
+em{font-style:italic;color:#555}
+.article p::first-line{font-weight:600}
+.article p::first-letter{font-size:1.6rem;float:left;margin-right:.2rem}

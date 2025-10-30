@@ -1,0 +1,11 @@
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{margin:24px;background:#f4f7fb;color:#111}
+h1{text-align:center;margin-bottom:18px}
+.transforms{display:flex;gap:18px;justify-content:center;align-items:center}
+.t{display:flex;flex-direction:column;align-items:center;gap:8px}
+.box{width:120px;height:80px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:all .4s ease;box-shadow:0 6px 12px rgba(0,0,0,.06)}
+.rotate .box:hover{transform:rotate(12deg)}
+.scale .box:hover{transform:scale(1.15)}
+.translate .box:hover{transform:translateY(-12px)}
+.skew .box:hover{transform:skewX(-12deg)}
+figcaption{font-size:.9rem;color:#333}
