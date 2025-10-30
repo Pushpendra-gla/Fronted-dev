@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q4 — Selectors Practice</title>
+  <link rel="stylesheet" href="q4.css" />
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Practice</h1>
+  </header>
+
+  <main>
+    <section class="selectors">
+      <h2>Element Selector</h2>
+      <p>This paragraph is styled by the element selector <code>p</code>.</p>
+
+      <h2>Class &amp; ID</h2>
+      <p class="highlight">This paragraph uses the <code>.highlight</code> class.</p>
+      <p id="special">This paragraph has the <code>#special</code> id.</p>
+
+      <h2>Attribute Selector</h2>
+      <a href="#" title="top link" data-type="nav">Attribute link (data-type="nav")</a>
+
+      <h2>Combinators</h2>
+      <div class="combo">
+        <p>Parent &gt; child example:</p>
+        <div class="parent">
+          <p class="child">I am a direct child (.parent &gt; .child)</p>
+        </div>
+
+        <p class="first-sibling">I come before an adjacent sibling.</p>
+        <p class="second-sibling">I am selected using the adjacent sibling selector (+).</p>
+
+        <div>
+          <p class="descendant">I am a descendant (space combinator).</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Q4 — Selector examples</small>
+  </footer>
+</body>
+</html>

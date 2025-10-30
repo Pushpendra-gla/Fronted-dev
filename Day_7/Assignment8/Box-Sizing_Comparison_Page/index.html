@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q8 — Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="q8.css" />
+</head>
+<body>
+  <main class="compare">
+    <h1>box-sizing Comparison</h1>
+
+    <section class="panels">
+      <div class="panel normal">
+        <h2>Default (content-box)</h2>
+        <div class="box">Content + padding + border increases total</div>
+        <p class="desc">With default box-sizing, padding and border are added to the specified width.</p>
+      </div>
+
+      <div class="panel borderbox">
+        <h2>box-sizing: border-box</h2>
+        <div class="box boxed">Width includes padding &amp; border</div>
+        <p class="desc">With <code>border-box</code>, the specified width includes padding and border.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

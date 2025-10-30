@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial;
+  background: linear-gradient(180deg,#fff,#f6fbff);
+  padding: 1.5rem;
+  color: #072033;
+}
+.compare { max-width: 1000px; margin: 0 auto; }
+h1 { text-align: center; margin-bottom: 1rem; }
+.panels {
+  display: flex;
+  gap: 1.6rem;
+}
+.panel {
+  flex: 1;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(8,20,40,0.06);
+}
+.panel .box {
+  width: 240px;
+  padding: 20px;
+  border: 6px solid rgba(124,92,255,0.12);
+  background: #fcfdff;
+  margin: .6rem 0;
+}
+.borderbox .boxed { box-sizing: border-box; }
+.desc { color: #556; margin-top: .25rem; }
+@media (max-width: 800px) {
+  .panels { flex-direction: column; }
+}

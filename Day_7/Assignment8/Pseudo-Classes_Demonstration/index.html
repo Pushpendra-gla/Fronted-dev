@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q1 — Pseudo-Classes Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Pseudo-Classes Demonstration</h1>
+    <p class="subtitle">Examples: <code>:hover</code>, <code>:focus</code>, <code>:active</code>, <code>:nth-child()</code></p>
+  </header>
+
+  <main>
+    <section class="examples" aria-label="Pseudo-class examples">
+      <article class="example">
+        <h2>Link - <code>:hover</code></h2>
+        <p><a href="#" class="link-hover">Hover over this link</a>
+           <span class="explain">— <small>Changes color &amp; underline on hover</small></span>
+        </p>
+      </article>
+
+      <article class="example">
+        <h2>Button - <code>:focus</code> &amp; <code>:active</code></h2>
+        <p>
+          <button class="btn primary">Primary</button>
+          <button class="btn ghost">Ghost</button>
+        </p>
+        <p class="explain"><small>Tab to focus and click to see :active</small></p>
+      </article>
+
+      <article class="example">
+        <h2>List - <code>:nth-child()</code></h2>
+        <ul class="demo-list">
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+          <li>List item 4</li>
+          <li>List item 5</li>
+        </ul>
+        <p class="explain"><small>Even items highlighted using :nth-child(even)</small></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Q1 — Pseudo-Classes • Demo</small>
+  </footer>
+</body>
+</html>
