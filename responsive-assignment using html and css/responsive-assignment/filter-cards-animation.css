@@ -1,0 +1,42 @@
+/* Filter Cards with Animation (Q5) */
+* { box-sizing: border-box; }
+:root { --bg:#0b1220; --text:#e5e7eb; --card:#0f172a; --accent:#34d399; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+header, footer { text-align:center; padding:1rem; }
+header h1 { color: var(--accent); }
+
+/* Fade-in on page load */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.profiles {
+  display: flex; gap: 1rem; padding: 1rem; justify-content: center; flex-wrap: wrap;
+  animation: fadeIn 600ms ease both;
+}
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card img {
+  width: 100%; height: auto; display:block; border-radius: 10px;
+  filter: grayscale(100%); /* default filter */
+  transition: filter 0.35s ease;
+}
+.card:hover img { filter: none; }
+.card:hover {
+  transform: translateY(-10px); /* lift on hover as required */
+  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+}
+
+/* Stack vertically below 800px */
+@media (max-width: 800px) {
+  .profiles { flex-direction: column; align-items: center; }
+  .card { width: min(92%, 440px); }
+}

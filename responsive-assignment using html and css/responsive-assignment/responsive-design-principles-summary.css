@@ -1,0 +1,30 @@
+/* Responsive Design Principles Summary (Q9) */
+* { box-sizing: border-box; }
+:root { --bg:#0b1220; --text:#f8fafc; --card:#0f172a; --accent:#a78bfa; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+header, footer { text-align:center; padding:1rem; }
+header h1 { color: var(--accent); }
+
+.principles {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.box {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+.box:hover {
+  background: linear-gradient(135deg, #4c1d95, #0ea5e9);
+  color: #ffffff;
+}
+.box h2 { margin-top: 0; color: var(--accent); }
+
+/* Below 600px: single-column */
+@media (max-width: 600px) {
+  .principles { grid-template-columns: 1fr; }
+}

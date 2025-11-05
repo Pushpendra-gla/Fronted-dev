@@ -1,0 +1,31 @@
+/* Responsive Typography (Q4) */
+* { box-sizing: border-box; }
+:root { --bg:#0c0a09; --text:#f3f4f6; --accent:#22d3ee; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+
+.visually-hidden { position:absolute; left:-9999px; }
+
+.typography {
+  max-width: 65ch;
+  margin: min(12vh, 6rem) auto;
+  padding: 1.25rem;
+  text-align: center; /* Center align as required */
+}
+.typography h1 {
+  /* Required clamp() */
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+}
+.typography p {
+  /* Required clamp() */
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Below 700px: adjust line-height and spacing */
+@media (max-width: 700px) {
+  .typography { padding: 1.5rem; }
+  .typography p { line-height: 1.9; letter-spacing: 0.2px; }
+}

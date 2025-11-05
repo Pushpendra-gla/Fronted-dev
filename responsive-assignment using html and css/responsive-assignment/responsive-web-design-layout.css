@@ -1,0 +1,38 @@
+/* Responsive Web Design Layout (Q2) */
+/* Reset & tokens */
+* { box-sizing: border-box; }
+:root { --bg:#0b132b; --text:#e0e6ed; --accent:#5bc0be; --card:#1c2541; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+.container { width: min(1100px, 92%); margin: 0 auto; }
+
+/* Header with logo left, nav right via Flexbox */
+.site-header { background: #111827; position: sticky; top: 0; z-index: 10; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+.logo { font-weight: 800; letter-spacing: 0.5px; color: var(--accent); }
+.nav { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+.nav a { color: var(--text); text-decoration: none; opacity: 0.9; }
+.nav a:hover { opacity: 1; text-decoration: underline; }
+
+/* Main: three feature boxes horizontally (Flexbox) */
+.features { display: flex; gap: 1rem; padding: 1rem 0 2rem; }
+.feature-box {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1.25rem;
+  flex: 1 1 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+.feature-box:hover {
+  transform: scale(1.03); /* slight scale on hover */
+  box-shadow: 0 12px 26px rgba(0,0,0,0.45);
+}
+.feature-box h2 { margin-top: 0; color: var(--accent); }
+
+/* Footer centered */
+.site-footer { text-align: center; padding: 1rem 0; background: #0f172a; }
+
+/* Below 750px: stack feature boxes vertically */
+@media (max-width: 750px) {
+  .features { flex-direction: column; }
+}

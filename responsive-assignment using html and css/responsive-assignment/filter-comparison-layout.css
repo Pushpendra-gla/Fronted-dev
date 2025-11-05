@@ -1,0 +1,25 @@
+/* Filter Comparison Layout (Q8) */
+* { box-sizing: border-box; }
+:root { --bg:#0b0f1a; --text:#f8fafc; --accent:#f472b6; --card:#0f172a; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+header, footer { text-align:center; padding:1rem; }
+header h1 { color: var(--accent); }
+
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* side-by-side on desktop */
+  gap: 1rem;
+  padding: 1rem;
+  align-items: start;
+}
+figure { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.35); }
+figure img { display:block; width: 100%; height: auto; transition: filter 0.35s ease; }
+figcaption { padding: 0.5rem 0.75rem; text-align:center; color: var(--accent); }
+
+.filtered img { filter: contrast(180%); } /* apply filter to right image */
+.filtered:hover img { filter: none; }      /* smooth removal on hover */
+
+/* Below 700px, stack vertically */
+@media (max-width: 700px) {
+  .compare { grid-template-columns: 1fr; }
+}

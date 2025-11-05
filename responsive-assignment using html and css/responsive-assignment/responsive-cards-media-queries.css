@@ -1,0 +1,35 @@
+/* Responsive Cards with Media Queries (Q3) */
+* { box-sizing: border-box; }
+:root { --bg:#0b1020; --text:#e5e7eb; --card:#111827; --hover:#1f2937; --accent:#60a5fa; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+header, footer { text-align:center; padding:1rem; }
+header h1 { margin: 0.5rem 0; color: var(--accent); }
+
+.cards {
+  display: flex;            /* Flex row */
+  flex-wrap: wrap;          /* Allow wrapping */
+  gap: 1rem;                /* Equal spacing */
+  padding: 1rem;
+  justify-content: center;
+}
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem;            /* Equal padding */
+  flex: 1 1 calc(25% - 1rem); /* Desktop: 4 columns */
+  min-width: 220px;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+.card:hover { background: var(--hover); transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.45); }
+.card h2 { margin-top: 0; color: var(--accent); }
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .card { flex: 1 1 calc(50% - 1rem); }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .card { flex: 1 1 100%; }
+}

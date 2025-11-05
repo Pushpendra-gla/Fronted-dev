@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combined Responsive Web Demo</title>
+  <link rel="stylesheet" href="combined-responsive-web-demo.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Responsive Demo</div>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#cheat">Cheat Sheet</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container fade-in">
+    <section id="gallery" class="gallery" aria-label="Image gallery">
+      <figure><img src="https://picsum.photos/id/1084/600/400" alt="Sea cliff" /><figcaption>Cliff</figcaption></figure>
+      <figure><img src="https://picsum.photos/id/1080/600/400" alt="City skyline" /><figcaption>City</figcaption></figure>
+      <figure><img src="https://picsum.photos/id/1018/600/400" alt="Road in forest" /><figcaption>Forest</figcaption></figure>
+    </section>
+
+    <section id="about" class="about" aria-label="Text explanation">
+      <h2>What is Responsive Design?</h2>
+      <p>It ensures layouts adapt to varying screens using flexible grids, images, and media queries.</p>
+    </section>
+
+    <section id="cheat" class="cheat" aria-label="Cheat sheet preview">
+      <article class="card"><h3>Filters</h3><p><code>filter: grayscale(100%)</code></p></article>
+      <article class="card"><h3>Typography</h3><p><code>font-size: clamp(1rem, 2vw, 1.4rem)</code></p></article>
+      <article class="card"><h3>Media Queries</h3><p><code>@media (max-width: 700px)</code></p></article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>Contact: hello@example.com</small></div>
+  </footer>
+</body>
+</html>

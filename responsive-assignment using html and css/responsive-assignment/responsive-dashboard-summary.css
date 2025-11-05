@@ -1,0 +1,58 @@
+/* Responsive Dashboard Summary (Q10) */
+* { box-sizing: border-box; }
+:root { --bg:#0a0f1e; --text:#e5e7eb; --panel:#0f172a; --accent:#10b981; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+
+/* Simple load animation */
+@keyframes pop {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.header, .footer { text-align:center; padding:1rem; background:#111827; }
+.header h1 { color: var(--accent); margin: 0.5rem 0; }
+
+/* Grid layout: header (implicit), sidebar + main */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+.sidebar {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  animation: pop 500ms ease both;
+}
+.sidebar ul { list-style:none; margin:0; padding:0; display: grid; gap: 0.5rem; }
+.sidebar a { color: var(--text); text-decoration: none; opacity: 0.9; }
+.sidebar a:hover { opacity: 1; }
+
+.content { animation: pop 650ms ease both; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.card {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+.card:hover { transform: scale(1.02); box-shadow: 0 12px 26px rgba(0,0,0,0.45); }
+
+.footer { text-align:center; padding:1rem; background:#111827; }
+
+/* Below 750px: sidebar to top (full width); content below stacks */
+@media (max-width: 750px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
