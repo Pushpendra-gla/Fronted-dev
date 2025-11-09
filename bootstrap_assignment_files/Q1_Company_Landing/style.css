@@ -1,0 +1,5 @@
+
+/* Q1 style.css */
+/* Use Bootstrap utilities. Add minor custom styles here. */
+.hero { background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%); }
+.card { border: none; box-shadow: 0 6px 18px rgba(2,6,23,0.06); }

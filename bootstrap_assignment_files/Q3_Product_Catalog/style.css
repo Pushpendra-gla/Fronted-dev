@@ -1,0 +1,5 @@
+
+/* Q3 style.css */
+.card.transition { transition: transform .25s ease, box-shadow .25s ease; }
+.card.transition:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.12); }
+.card img { height:180px; object-fit:cover; }

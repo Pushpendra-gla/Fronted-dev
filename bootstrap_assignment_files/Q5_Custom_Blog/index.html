@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom Themed Blog - Q5</title>
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;}</style>
+</head>
+<body>
+
+<style>
+  :root{--bs-primary:#b91c1c; --bs-body-font-family:'Inter',system-ui, -apple-system, 'Segoe UI', Roboto; }
+</style>
+<header class="py-4">
+  <div class="container text-center">
+    <h1 class="fw-bold" style="color:var(--bs-primary)">My Dev Blog</h1>
+  </div>
+</header>
+
+<main class="py-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <article class="card p-3">
+          <h3>Post Title One</h3>
+          <p class="mb-0">A short excerpt of the blog post that uses the custom theme color.</p>
+          <a href="#" class="btn btn-outline-primary mt-2">Read more</a>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="card p-3">
+          <h3>Post Title Two</h3>
+          <p class="mb-0">A short excerpt showing the personalized styling for headings and buttons.</p>
+          <a href="#" class="btn btn-outline-primary mt-2">Read more</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="py-3 bg-light text-center">© 2025 My Dev Blog</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+
+/* Q8 style.css */
+.card { border-radius: .7rem; transition: transform .25s ease; }
+.card:hover { transform: translateY(-10px); }
