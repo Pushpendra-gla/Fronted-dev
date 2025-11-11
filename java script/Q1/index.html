@@ -1,22 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Greeting</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Universal Greeting Nexus</title>
+
+  <!-- Font + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="shell">
+    <section class="left-panel">
+      <div class="brand">
+        <div class="logo-neon">NEXUS</div>
+        <div class="subtitle">Personalized Login & Greeting System</div>
+      </div>
 
-    <div class="container">
-        <h2>Personalized Login Greeting</h2>
+      <div class="card glass">
+        <div class="greeting-area">
+          <div id="animatedCube" class="cube" aria-hidden="true">
+            <div class="face front">👋</div>
+            <div class="face back">🤖</div>
+            <div class="face right">🎮</div>
+            <div class="face left">✨</div>
+            <div class="face top">☀️</div>
+            <div class="face bottom">🌙</div>
+          </div>
 
-        <input type="text" id="nameInput" placeholder="Enter your name">
-        <button onclick="showGreeting()">Show Greeting</button>
+          <div class="greet-box">
+            <div id="greetText" class="greet-text">Welcome — tell me your name.</div>
+            <div class="controls">
+              <input id="nameInput" type="text" placeholder="Type your name..." autocomplete="off" />
+              <button id="greetBtn" class="btn neon"><i class="fa-solid fa-paper-plane"></i> Greet Me</button>
+            </div>
 
-        <p id="result"></p>
-    </div>
+            <div class="options">
+              <label><input id="voiceToggle" type="checkbox" checked /> Voice</label>
+              <label><input id="soundToggle" type="checkbox" checked /> Effects</label>
+              <label><input id="rememberToggle" type="checkbox" checked /> Remember me</label>
+            </div>
 
-    <script src="script.js"></script>
+            <div id="moodPills" class="mood-pills" aria-hidden="true">
+              <!-- dynamic mood chips -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats glass">
+        <div class="xp-row">
+          <div class="xp-label">XP</div>
+          <div class="xp-bar">
+            <div id="xpFill" class="xp-fill" style="width:0%"></div>
+          </div>
+          <div id="xpValue" class="xp-value">0</div>
+        </div>
+
+        <div class="meta-row">
+          <div id="timeNow" class="meta">--:--</div>
+          <div id="dateNow" class="meta">----</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="right-panel">
+      <div class="panel-card glass info-panel">
+        <h2>What this does</h2>
+        <ul>
+          <li>Time-aware greeting: morning / afternoon / evening</li>
+          <li>Jarvis-style voice & typing effect</li>
+          <li>Gaming XP, sound effects & 3D cube</li>
+          <li>Day/Night adaptive background</li>
+          <li>Local storage remembers the user</li>
+        </ul>
+      </div>
+
+      <div class="panel-card glass logs-panel">
+        <h3>Recent Greeting Log</h3>
+        <div id="logArea" class="log-area">No greetings yet.</div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="sfxPing" src="" preload="auto"></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
