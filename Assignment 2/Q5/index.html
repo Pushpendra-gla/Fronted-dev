@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Logic Access System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 Boolean Logic Access System</h1>
+        <p>Check your home’s security conditions in real time.</p>
+
+        <div class="card">
+            <div class="switches">
+                <label><input type="checkbox" id="door"> Door Locked</label><br>
+                <label><input type="checkbox" id="window"> Window Closed</label><br>
+                <label><input type="checkbox" id="alarm"> Alarm On</label><br>
+                <label><input type="checkbox" id="owner"> Owner Inside</label>
+            </div>
+
+            <button id="checkBtn">Check Security Status</button>
+            <div id="output" class="output"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by 🔐 Smart Logic Systems</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
