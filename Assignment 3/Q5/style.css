@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #232526, #414345);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.card {
+    width: 420px;
+    padding: 45px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    animation: pop 1s ease;
+}
+
+@keyframes pop {
+    from { opacity: 0; transform: scale(0.55); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: #00eaff;
+    color: black;
+    border-radius: 12px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00bcd4;
+}
+
+.tip {
+    margin-top: 20px;
+    padding: 12px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    font-size: 14px;
+}

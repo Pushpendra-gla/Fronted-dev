@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>JSON Audit</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="wrap">
+        <header>
+            <h1>JSON Audit</h1>
+            <p>Parse raw JSON, detect errors, convert ages, and find minors.</p>
+        </header>
+
+        <section class="controls">
+            <button id="run">Run Audit</button>
+            <button id="clear">Clear Output</button>
+        </section>
+
+        <section class="output">
+            <div class="panel">
+                <h2>Summary</h2>
+                <pre id="summary">Press "Run Audit" to begin.</pre>
+            </div>
+
+            <div class="panel">
+                <h2>Valid Entries (>=18)</h2>
+                <pre id="valid">-</pre>
+            </div>
+
+            <div class="panel">
+                <h2>Minors (&lt;18)</h2>
+                <pre id="minors">-</pre>
+            </div>
+
+            <div class="panel">
+                <h2>Errors (with line numbers)</h2>
+                <pre id="errors">-</pre>
+            </div>
+        </section>
+
+        <footer>
+            <small>Open DevTools Console for full, formatted logs.</small>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
