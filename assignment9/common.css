@@ -1,0 +1,8 @@
+
+body{font-family:Arial,Helvetica,sans-serif;margin:16px;background:#f4f6f8;color:#111}
+.section{background:#fff;padding:12px;margin:12px 0;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+h2{margin-top:0}
+.btn{padding:6px 10px;border:1px solid #ccc;background:#eee;cursor:pointer;border-radius:4px;margin:4px}
+.item{padding:8px;border:1px solid #ddd;margin:6px 0;border-radius:4px}
+.highlight{background: #fffbcc}
+.out{background:#f0f0f0;padding:8px;border-radius:4px}
