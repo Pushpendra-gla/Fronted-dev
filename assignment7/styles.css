@@ -1,0 +1,16 @@
+body{font-family:Arial,Helvetica,sans-serif;margin:20px;background:#f7f7f7;color:#222}
+h1{margin-bottom:10px}
+nav{margin-bottom:20px}
+.card{background:#fff;padding:12px;margin:12px 0;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.output, pre{background:#111;color:#0f0;padding:8px;border-radius:4px;white-space:pre-wrap}
+.output{background:#fafafa;color:#111;padding:8px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.gallery .thumb{height:100px;background:#ccc;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:4px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center}
+.modal-content{width:60%;height:60%;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:24px}
+.box{width:400px;height:400px;border:2px dashed #666;background:#fff;position:relative}
+.box .dot{width:8px;height:8px;border-radius:50%;background:red;position:absolute}
+.dropdown{position:relative;display:inline-block}
+.dropdown-list{position:absolute;left:0;top:100%;background:#fff;border:1px solid #ddd;list-style:none;padding:0;margin:6px 0;width:160px}
+.dropdown-list li{padding:8px;cursor:pointer}
+.err{color:red;margin-left:8px;font-size:12px}

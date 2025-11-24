@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Assignment 7 - Demo</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<h1>Assignment 7 - Interactive Demos</h1>
+<nav>
+  <a href="#q1">Q1</a> | <a href="#q2">Q2</a> | <a href="#q3">Q3</a> | <a href="#q4">Q4</a> |
+  <a href="#q5">Q5</a> | <a href="#q6">Q6</a> | <a href="#q7">Q7</a> | <a href="#q8">Q8</a> | <a href="#q9">Q9</a>
+</nav>
+
+<section id="q1" class="card">
+  <h2>Q1: Product List Manager</h2>
+  <input id="q1-input" placeholder="Add product name" />
+  <button id="q1-add">Add</button>
+  <ul id="q1-list"></ul>
+  <pre id="q1-log" class="output"></pre>
+</section>
+
+<section id="q2" class="card">
+  <h2>Q2: Live Character Counter</h2>
+  <textarea id="q2-text" maxlength="100" rows="4" cols="50"></textarea>
+  <div><span id="q2-remaining">100</span> characters remaining</div>
+  <button id="q2-reset">Reset</button>
+</section>
+
+<section id="q3" class="card">
+  <h2>Q3: Multi-Step Form</h2>
+  <div id="q3-steps">
+    <div class="step" data-step="1">
+      <label>Name: <input id="q3-name" /></label>
+    </div>
+    <div class="step" data-step="2" style="display:none">
+      <label>Email: <input id="q3-email" /></label>
+    </div>
+    <div class="step" data-step="3" style="display:none">
+      <label>Password: <input type="password" id="q3-password" /></label>
+    </div>
+    <div class="controls">
+      <button id="q3-back" disabled>Back</button>
+      <button id="q3-next">Next</button>
+    </div>
+    <div id="q3-summary" class="output"></div>
+  </div>
+</section>
+
+<section id="q4" class="card">
+  <h2>Q4: Theme Switcher</h2>
+  <button class="theme-btn" data-theme="light">Light</button>
+  <button class="theme-btn" data-theme="dark">Dark</button>
+  <button class="theme-btn" data-theme="blue">Blue</button>
+  <div class="output">Current theme: <span id="q4-current">light</span></div>
+</section>
+
+<section id="q5" class="card">
+  <h2>Q5: Image Gallery with Modal</h2>
+  <div id="q5-gallery" class="gallery"></div>
+  <div id="q5-modal" class="modal" style="display:none">
+    <div class="modal-content" id="q5-modal-content"></div>
+  </div>
+</section>
+
+<section id="q6" class="card">
+  <h2>Q6: Real-Time Table Filter</h2>
+  <input id="q6-search" placeholder="Search students..." />
+  <table id="q6-table">
+    <thead><tr><th>Name</th><th>Branch</th><th>CGPA</th></tr></thead>
+    <tbody></tbody>
+  </table>
+  <div id="q6-noresults" style="display:none">No results found</div>
+</section>
+
+<section id="q7" class="card">
+  <h2>Q7: Mouse Path & Coordinates Logger</h2>
+  <div id="q7-box" class="box"></div>
+  <div>Coordinates: <span id="q7-coords">-</span></div>
+</section>
+
+<section id="q8" class="card">
+  <h2>Q8: Custom Dropdown</h2>
+  <div class="dropdown" id="q8-dropdown">
+    <button id="q8-toggle">Select option</button>
+    <ul id="q8-options" class="dropdown-list" hidden>
+      <li data-val="Option 1">Option 1</li>
+      <li data-val="Option 2">Option 2</li>
+      <li data-val="Option 3">Option 3</li>
+    </ul>
+  </div>
+</section>
+
+<section id="q9" class="card">
+  <h2>Q9: Form Submit Blocker</h2>
+  <form id="q9-form" novalidate>
+    <div><label>Name: <input id="q9-name" required /></label><span class="err" id="q9-err-name"></span></div>
+    <div><label>Email: <input id="q9-email" required /></label><span class="err" id="q9-err-email"></span></div>
+    <div><label>Password: <input type="password" id="q9-password" required /></label><span class="err" id="q9-err-password"></span></div>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="q9-success" class="output"></div>
+</section>
+
+<script src="q1.js"></script>
+<script src="q2.js"></script>
+<script src="q3.js"></script>
+<script src="q4.js"></script>
+<script src="q5.js"></script>
+<script src="q6.js"></script>
+<script src="q7.js"></script>
+<script src="q8.js"></script>
+<script src="q9.js"></script>
+</body>
+</html>
