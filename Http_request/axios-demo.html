@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Axios CRUD Example</title>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<script>
+const BASE_URL = "http://localhost:3000/students";
+
+function axiosRequest(method, url, data = null) {
+    return axios({
+        method: method,
+        url: url,
+        data: data,
+        headers: { "Content-Type": "application/json" }
+    })
+    .then(response => response.data)
+    .catch(error => {
+        console.error("HTTP Error:", error);
+        throw error;
+    });
+}
+
+function getAllStudents() {
+    return axiosRequest("GET", BASE_URL)
+        .then(data => console.log("GET All:", data));
+}
+
+function getStudentById(id) {
+    return axiosRequest("GET", `${BASE_URL}/${id}`)
+        .then(data => console.log("GET One:", data));
+}
+
+function addStudent() {
+    return axiosRequest("POST", BASE_URL, {
+        name: "Aman",
+        score: 78
+    })
+        .then(data => console.log("POST Added:", data));
+}
+
+function replaceStudent() {
+    return axiosRequest("PUT", `${BASE_URL}/1`, {
+        name: "Shubham Updated",
+        score: 95
+    })
+        .then(data => console.log("PUT Updated:", data));
+}
+
+function updateStudentScore() {
+    return axiosRequest("PATCH", `${BASE_URL}/2`, {
+        score: 92
+    })
+        .then(data => console.log("PATCH Updated:", data));
+}
+
+function deleteStudent() {
+    return axiosRequest("DELETE", `${BASE_URL}/3`)
+        .then(() => console.log("DELETE Done"));
+}
+
+async function runAllRequestsAxios() {
+    await getAllStudents();
+    await getStudentById(1);
+    await addStudent();
+    await replaceStudent();
+    await updateStudentScore();
+    await deleteStudent();
+}
+
+runAllRequestsAxios();
+</script>
+</body>
+</html>

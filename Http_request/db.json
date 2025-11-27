@@ -1,0 +1,22 @@
+{
+  "login": [
+    {
+      "username": "user123",
+      "password": "securepassword",
+      "id": "1913"
+    },
+    {
+      "id": "6f32",
+      "email": "ahrr@hsf.com",
+      "password": "123"
+    }
+  ],
+  "signup": [
+    {
+      "username": "newuser",
+      "email": "",
+      "phone": "",
+      "id": "53c0"
+    }
+  ]
+}

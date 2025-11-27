@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery AJAX CRUD Example</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<script>
+const BASE_URL = "http://localhost:3000/students";
+
+function ajaxRequest(method, url, data = null) {
+    return $.ajax({
+        url: url,
+        method: method,
+        contentType: "application/json",
+        data: data ? JSON.stringify(data) : null
+    });
+}
+
+function getAllStudents() {
+    return ajaxRequest("GET", BASE_URL)
+        .then(data => console.log("GET All:", data))
+        .catch(err => console.error(err));
+}
+
+function getStudentById(id) {
+    return ajaxRequest("GET", `${BASE_URL}/${id}`)
+        .then(data => console.log("GET One:", data))
+        .catch(err => console.error(err));
+}
+
+function addStudent() {
+    return ajaxRequest("POST", BASE_URL, {
+        name: "Aman",
+        score: 78
+    })
+        .then(data => console.log("POST Added:", data))
+        .catch(err => console.error(err));
+}
+
+function replaceStudent() {
+    return ajaxRequest("PUT", `${BASE_URL}/1`, {
+        name: "Ram Updated",
+        score: 95
+    })
+        .then(data => console.log("PUT Updated:", data))
+        .catch(err => console.error(err));
+}
+
+function updateStudentScore() {
+    return ajaxRequest("PATCH", `${BASE_URL}/2`, {
+        score: 92
+    })
+        .then(data => console.log("PATCH Updated:", data))
+        .catch(err => console.error(err));
+}
+
+function deleteStudent() {
+    return ajaxRequest("DELETE", `${BASE_URL}/3`)
+        .then(() => console.log("DELETE Done"))
+        .catch(err => console.error(err));
+}
+
+async function runAllRequests() {
+    await getAllStudents();
+    await getStudentById(1);
+    await addStudent();
+    await replaceStudent();
+    await updateStudentScore();
+    await deleteStudent();
+}
+runAllRequests();
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+// Base URL of JSON Server
+const BASE_URL = "http://localhost:3000/students";
+
+function getAllStudents() {
+    return fetch(BASE_URL)
+        .then(res => res.json())
+        .then(data => console.log("GET All:", data));
+}
+
+function getStudentById(id) {
+    return fetch(`${BASE_URL}/${id}`)
+        .then(res => res.json())
+        .then(data => console.log("GET One:", data));
+}
+
+function addStudent() {
+    return fetch(BASE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: "Aman", score: 78 })
+    })
+        .then(res => res.json())
+        .then(data => console.log("POST Added:", data));
+}
+
+function replaceStudent() {
+    return fetch(`${BASE_URL}/1`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: "Ram Updated", score: 95 })
+    })
+        .then(res => res.json())
+        .then(data => console.log("PUT Updated:", data));
+}
+
+function updateStudentScore() {
+    return fetch(`${BASE_URL}/2`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ score: 92 })
+    })
+        .then(res => res.json())
+        .then(data => console.log("PATCH Updated:", data));
+}
+
+function deleteStudent() {
+    return fetch(`${BASE_URL}/3`, { method: "DELETE" })
+        .then(() => console.log("DELETE Done"));
+}
+
+async function runAllRequests() {
+    await getAllStudents();
+    await getStudentById(1);
+    await addStudent();
+    await replaceStudent();
+    await updateStudentScore();
+    await deleteStudent();
+}
+
+runAllRequests();
